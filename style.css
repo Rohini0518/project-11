@@ -20,6 +20,9 @@
     flex-grow: 1;
 
 }
+.menu-bar{
+display:none;
+}
 .nav-list{
     display:flex;
 gap:50px;
@@ -66,9 +69,8 @@ flex-grow:1;
 }
 
 .heading-text{
-    font-size:3.6rem;
+    font-size:3.3rem;
     font-weight:600;
-    /* line-height: 70px; */
     margin-bottom:30px;
 }
 
@@ -131,6 +133,7 @@ padding:10px 0px 5px 20px;
 flex:1 1 400px;
 align-items: center;
 box-shadow: 5px 5px 30px #f1efef;
+border-radius: 20px;
 }
 
 .services-prgh{
@@ -169,6 +172,7 @@ align-items: center;
   display:flex;
   flex-direction: column;
   gap:20px;
+  border-radius: 20px;
 }
 
 .pack-details{
@@ -213,11 +217,13 @@ background-color: transparent;
 border:solid #0691f1;
 color:#0691f1;
 font-weight:700;
+border-radius: 10px;
 }
 
 .active-pack{
     background-color: black;
     color:white;
+    border-radius:20px 0px;
 }
 
 .active-btn{
@@ -257,7 +263,7 @@ text-align: center;
 width:520px;
 border:1px solid #dcdcdc;
 padding:15px 2px 10px 20px; 
-border-radius:5px;
+border-radius: 15px;
 }
 
 .review-active{
@@ -369,78 +375,65 @@ font-size:15px;
     font-size:20px;
 }
 
-
-
 .social-media p{
 font-weight: 700;
 text-align: center;
 font-size:20px;
 }
 
-
-
-
-/* -----------media queriess-------------- */
+/* ---------------------------media queriess---------------------------- */
 
 /* ------nav bar------ */
-@media screen and (max-width:800px){
+@media screen and (max-width:500px){
 .nav-bar{
     display:flex;
-    flex-flow:row wrap;
-    height:150px;
+    height:80px;
 }
 
 .nav-list{
-    gap:10px;
-    margin-left:2px;
+    display:none;
 }
 
-/* ----------hosting-section------------------- */
+.menu-bar{
+    display:flex;
+    width:30px;
+    cursor:pointer;
+    
+    }
+
+/* ----hosting-section------- */
+
 .hosting-section{
     display:flex;
-gap:10px;
-    margin:10px;
-    font-family: 'Roboto', sans-serif;
-width:85%;
-margin: 10px auto;
-flex-direction: column;
+margin: 20px auto;
 border:#dcdcdc solid;
-padding-left:20px;
-border-radius:30px;
-
+max-height:250px;
+width:70%;
 }
 
-.hosting-text{
-align-items: flex-start;
-flex-grow:1;
-
-}
 
 .heading-text{
-    font-size:2rem;
-    font-weight:600;
-    line-height: 40px;
+    font-size:1.5rem;
+    line-height: 25px;
     margin-bottom:10px;
+
 }
 
 .para-text{
-    font-size:15px;
-    line-height: 20px;
-    color:rgb(75, 73, 73);
+    font-size:12px;
+    line-height: 15px;
+
 
 }
 
 .btn-middle{
     padding:10px 20px;
-    background-color:#0691f1;
-    color:#ffffff;
     box-shadow:none;
     margin-top:-10px;
 }
 
 .cloud-img img{
-    height:200px;
-    width:300px;
+    display: none;
 }
 
 /* -------services---------- */
@@ -448,8 +441,6 @@ flex-grow:1;
 .services{
     display:flex;
    flex-direction: column;
-    width:85%;
-    margin:auto;
     gap:20px;
 }
 .services>h2{
@@ -464,29 +455,114 @@ display:none;
 /* ---flexible prices section------ */
 
 .pricing-section{
-    background-color:#0691f1;
-    height:800px;
+    height:500px;
 
 }
 .price-card{
-  height:620px;
+  height:300px;
   gap:20px;
 }
 
+.pack-features{
+display: none;
+}
+
+.price-prgh{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.plan-btn{
+    padding:10px 10px;
+   
+    }
+
+    .review-heading p{
+        display:none;
+    }
 
 /* ---------quit section--------- */
 
 .quit-heading h2{
-    font-size:2rem;
+    font-size:1.5rem;
 }
-
 
 
 /* ---footer section------- */
+
+.footer{
+    display:flex;
+    flex-wrap: wrap;
+
+}
 .social-media img{
     width:80px;
 }
-
+.footer-logo p{
+    line-height:20px;
+    font-size:12px;
+    }
 
 
 }
+
+@media screen and (max-width:900px){
+
+
+    .nav-list{
+        display:none;
+    }
+  
+    .menu-bar{
+        display:flex;
+        width:30px;
+        cursor:pointer;
+        }
+
+        .hosting-section{
+           
+        /* border:#dcdcdc solid; */
+        border-radius:30px;
+        gap:10px;
+        padding:30px;
+         height:350px;
+        }
+
+        .heading-text{
+            font-size:1.5rem;
+            line-height: 25px;
+        }
+.cloud-img img{
+    height:300px;
+    width:400px;
+}
+
+.services>h2{
+    font-size:2rem;
+    text-align: left;
+
+}
+
+.services-icons{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.card-services{
+    padding:10px;
+    flex:1 1 200px;
+    }
+
+    .quit-heading h2{
+        font-size:1.5rem;
+    }
+    .menu-footer{
+       
+        gap:10px;
+    
+    }
+
+}
+
+
